@@ -7,6 +7,8 @@ import {io} from "socket.io-client";
 
 const backenedUrl=import.meta.env.VITE_BACKENED_URL
 axios.defaults.baseURL=backenedUrl;
+axios.defaults.withCredentials = true;
+
 export const AuthContext=createContext();
 
 export const AuthProvider=({children})=>{

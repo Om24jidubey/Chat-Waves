@@ -42,7 +42,11 @@ io.on("connection",(socket)=>{
 
 //Middleware Setup
 app.use(express.json({limit:"4mb"})); // Parse JSON requests with a body size limit
-app.use(cors());  // Enable Cross-Origin Resource Sharing
+// app.use(cors());  // Enable Cross-Origin Resource Sharing
+app.use(cors({
+    origin: ["https://omdubeychat-waves.vercel.app"],  // Your deployed frontend
+    credentials: true
+}));
 
 
 //Routes setup
