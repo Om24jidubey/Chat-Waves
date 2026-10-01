@@ -44,7 +44,7 @@ io.on("connection",(socket)=>{
 app.use(express.json({limit:"4mb"})); // Parse JSON requests with a body size limit
 // app.use(cors());  // Enable Cross-Origin Resource Sharing
 app.use(cors({
-    origin: ["https://omdubeychat-waves.vercel.app"],  // Your deployed frontend
+    origin: ["https://omdubeychat-waves.vercel.app", "http://localhost:5173"],  // Your deployed frontend and local development
     credentials: true
 }));
 
